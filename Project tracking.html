@@ -1,0 +1,924 @@
+<html lang="en">
+
+
+<head>
+	
+	<title>Project tracking intro component</title>
+	
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	
+	
+	<style>
+		
+		/* lg */
+	
+		body{
+			background-color: white;
+			width: 97%;
+			overflow-x: hidden;
+		}
+	
+	
+	
+		#container{
+			display: inline-block;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			width: 94%;
+			margin-top: 70px;
+			margin-left: 90px 
+		}
+	
+		#cont1{
+			position: absolute;
+			left:10%
+		}
+		
+		#new{
+			background-color: black;
+			height: 25px;
+			width: 50px;
+			border-radius: 30px;
+			color:white;
+			text-align: center;
+			display: inline-block
+			
+		}
+		
+		h1{
+			font-size: 40px;
+			color:black;
+			font-family: [Barlow Condensed];
+			font-weight: 900;
+			
+		}
+		
+		#cont2{
+			position: absolute;
+		/* left: 48%; */
+			right: 0%;
+			 width: 52%; 
+		/*	width: 700px;   not responsive */
+			margin-top: -70px;
+			height: 500px;
+			background-color: #dddddd;
+			background-position: top;
+			border-bottom-left-radius: 90px;
+			
+		}
+		#img2{
+			position: absolute;
+			top:10%;
+			
+			left:47%
+		}
+		
+		
+		#words{
+			display: inline;
+			position: relative;
+			right: -100px;
+			
+			text-decoration: none;
+			color:black;
+			position: relative;
+			top:70px
+			
+		}
+		
+		#words li{
+			
+			display: inline;
+			list-style-type: none;
+		}
+		#words li a div{
+			
+			display: inline;
+			
+			
+		}
+	
+		#words li a {
+			
+			font-family:[Barlow Condensed];
+			font-weight: bold;
+			font-size: 15px;
+			margin-left: 40px;
+			text-decoration: none;
+			color:black;
+			transition: all 1s ease-in-out;
+			letter-spacing: -1px
+			
+		}
+		#words li a:hover{
+			text-decoration: underline;
+		}
+		
+		#butt1{
+			background-color: hsl(0, 100%, 68%);
+			height: 50px;
+			width: 170px;
+			border: 1px solid white; 
+			border-radius: 5px ;
+			color:white;
+			text-align: center;
+			transition: all 0.5s ease-in-out
+		}
+		#butt1:hover{
+			opacity: 0.7
+		}
+		
+		#butt2{
+			margin-left: 30px;
+			background-color: white;
+			height: 50px;
+			width: 170px;
+			border:0px;
+			word-spacing: 7px;
+			color:#c6bcbc;
+			border-radius: 5px;
+			text-align: center;
+			
+		}
+		
+		/* md sm  */ 
+		
+		#container2{
+			display: inline-block;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			width: 94%;
+			margin-top: 70px;
+			margin-left: 90px 
+		}
+		#words2{
+			display: inline;
+			position: relative;
+			left: 80%;
+			
+			text-decoration: none;
+			color:black;
+			position: relative;
+			top:40px
+			
+		}
+		
+		
+	#cont10{
+			position: absolute;
+		top:35px;
+			left:5%
+		}
+		#cont20{
+			position: absolute;
+		/* left: 48%; */
+			right: 0%;
+			 width: 52%; 
+		/*	width: 700px;   not responsive */
+			margin-top: -250px;
+			height: 500px;
+			background-color: #dddddd;
+			background-position: top;
+			border-bottom-left-radius: 90px;
+			
+		}
+		#img20{
+			position:absolute;
+			top:0%;
+			left:15%;
+			
+			height: 40%;
+			width: 55%;
+			
+		}
+		#new2{
+			background-color: black;
+			height: 25px;
+			width: 50px;
+			border-radius: 30px;
+			color:white;
+			text-align: center;
+			display: inline-block
+			
+		}
+		
+		#butt10{
+			background-color: hsl(0, 100%, 68%);
+			height: 50px;
+			width: 170px;
+			border: 1px solid white; 
+			border-radius: 5px ;
+			color:white;
+			text-align: center;
+			transition: all 0.5s ease-in-out
+		}
+		#butt10:hover{
+			opacity: 0.7
+		}
+		
+		#butt20{
+			
+			
+			float: right;
+			
+			background-color: white;
+			height: 50px;
+			width: 170px;
+			border:0px;
+			word-spacing: 7px;
+			color:#c6bcbc;
+			border-radius: 5px;
+			text-align: center;
+			
+		}
+		
+		/* xs */
+		
+		
+		#container20{
+			display: inline-block;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			width: 94%;
+			margin-top: 70px;
+			margin-left: 90px 
+		}
+		#words20{
+			display: inline;
+			position: relative;
+			left: 80%;
+			
+			text-decoration: none;
+			color:black;
+			position: relative;
+			top:40px
+			
+		}
+		
+		
+	#cont100{
+			position: absolute;
+			left:5%;
+		top:35px;
+		}
+		#cont200{
+			position: absolute;
+		/* left: 48%; */
+			right: 0%;
+			 width: 52%; 
+		/*	width: 700px;   not responsive */
+			margin-top: -250px;
+			height: 500px;
+			background-color: #dddddd;
+			background-position: top;
+			border-bottom-left-radius: 90px;
+			
+		}
+		#img200{
+			position:absolute;
+			top:0%;
+			left:5%;
+			
+			height: 40%;
+			width: 80%;
+			
+		}
+		#new20{
+			background-color: black;
+			height: 25px;
+			width: 50px;
+			border-radius: 30px;
+			color:white;
+			text-align: center;
+			display: inline-block
+			
+		}
+		
+		#butt100{
+			background-color: hsl(0, 100%, 68%);
+			height: 50px;
+			width: 170px;
+			border: 1px solid white; 
+			border-radius: 5px ;
+			color:white;
+			text-align: center;
+			transition: all 0.5s ease-in-out
+		}
+		#butt100:hover{
+			opacity: 0.7
+		}
+		
+		#butt200{
+			
+			
+			float: right;
+			
+			background-color: white;
+			height: 50px;
+			width: 170px;
+			border:0px;
+			word-spacing: 7px;
+			color:#c6bcbc;
+			border-radius: 5px;
+			text-align: center;
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+			#insideburger{
+				
+				position: absolute;
+				top:20%;
+				left:30%;
+				background-color: white;
+				box-sizing: border-box;
+				text-shadow: (5px , 5px , 7px , red);
+				border:5px solid white;
+				height: 250px;
+				width: 60%;
+				z-index: 1000000;
+				transition: 2s;
+				
+			}
+		hr{
+			border:1px solid;
+			width: 80%
+		}
+			#insideburger li a{
+
+			font-family: cursive;
+				color:black;
+				font-size: 25px;
+				list-style-type: none;
+				text-align: center;
+				
+				
+				cursor: pointer;
+			}
+			#insideburger li{
+				list-style-type: none;
+				margin-top: 30px;
+				cursor: pointer;
+				text-align: center
+			}
+			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			#insideburger2{
+				
+				position: absolute;
+				top:20%;
+				left:20%;
+				background-color: white;
+				box-shadow: 5px;
+				border:5px solid white;
+				height: 250px;
+				width: 70%;
+				z-index: 1000000;
+				transition: 2s;
+				
+			}
+			#insideburger2 li a{
+
+			font-family: cursive;
+				color:black;
+				font-size: 25px;
+				list-style-type: none;
+				text-align: center;
+				
+				
+				cursor: pointer;
+			}
+			#insideburger2 li{
+				list-style-type: none;
+				margin-top: 30px;
+				cursor: pointer;
+				text-align: center
+			}
+			
+			
+	</style>
+	
+	
+	
+	
+	
+	
+	</head>
+
+<body>
+	
+	<div class="visible-lg">  
+	
+	<div id="container">
+	
+	
+	
+	<div id="cont1">
+		
+		<img src="./images/logo.svg"/>
+		
+		
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		
+	
+		<div id="new"><strong>NEW</strong></div> <span style="margin-left: 20px; color:#c6bcbc; letter-spacing: 2.5px">MONOGRAPH &nbsp; DASHBOARD</span>	
+		
+		
+		
+		
+		<h1><strong>POWERFUL INSIGHTS<br> INTO YOUR TEAM</strong></h1>
+		
+		<br>
+		<h3 >Project planning and time tracking<br> for agile teams</h3>
+		
+		<br>
+		<div style="display: inline">
+		<button id="butt1"><strong> SCHUDLE A DEMO </strong> </button>
+		
+		<button id="butt2"><strong> TO SEE A PREVIEW </strong> </button>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	
+	
+		<div id="cont2">
+		
+			
+		
+		<div id="words">
+			
+			<li><a href="#"><strong>PRODUCTS</strong>  </a></li>
+			<li><a href="#"><strong> FEATURES</strong> </a></li>
+			<li><a href="#"><strong> PRICING</strong> </a></li>
+			
+			<li><a style="margin-left: 90px; color:lightslategray; " href="#"><strong> LOGIN</strong> </a></li>
+			
+			<div style="height: 12px; width: 12px; border-radius: 50%; background-color: lightslategray; border:1px; display: inline-block; margin-left: -100px">  </div>
+			</div>
+		
+		
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+			
+		
+		</div>
+	
+	<img id="img2" style="margin-top: 130px; margin-left: 50px; " src="./images/mobile%20and%20desktop.svg"/>
+	
+	
+	
+	</div>
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+<!-- md and sm and xs  -->
+	
+	
+	
+	<div class="visible-md visible-sm ">  
+	
+	<div id="container2">
+	
+	
+	
+	<div id="cont10">
+		
+		<img src="./images/logo.svg"/>
+		
+		
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+		<div id="cont20">
+		
+			
+		
+		<div id="words2">
+			
+			<img onclick="showb();" id="burger1" style="cursor: pointer; position: absolute; right: 5%;" src="./images/icon-hamburger.svg"/>
+			<img  onclick="hideb();" id="burger2" style="cursor: pointer; display: none; position: absolute; right: 5%;" src="./images/icon-hamburger.svg"/>
+			</div>
+		<div style="display: none;" id="insideburger">
+		
+		<li><strong> PRODUCTS</strong></li>
+		<li><strong> FEATURES</strong></li>
+		<li><strong> PRICING </strong></li>
+			<hr>
+		<li style="color:grey"><strong> LOGIN</strong></li>
+		
+		
+		</div>
+		
+		
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+			
+		
+		</div>
+	
+	<img id="img20" style="margin-top: 130px; margin-left: 50px; " src="./images/mobile%20and%20desktop.svg"/>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<div style="position: absolute; left:5%; width: 85%"> 
+		
+		<div id="new2"><strong>NEW</strong></div> <span style="margin-left: 20px; color:#c6bcbc; letter-spacing: 2.5px">MONOGRAPH &nbsp; DASHBOARD</span>	
+		
+			<h1 style="font-size: 28px; font-family:[Barlow Condensed] "><strong><B>POWERFUL INSIGHTS  INTO YOUR TEAM</B></strong></h1>
+		
+		<br>
+		<h3 style="font-size: 18px; word-break: break-word" >Project planning and time tracking  for agile teams</h3>
+		
+		<br>
+		<div style="display: inline">
+		<button id="butt10"><strong> SCHUDLE A DEMO </strong> </button>
+		
+		<button id="butt20"><strong> TO SEE A PREVIEW </strong> </button>
+		</div>
+	
+	
+	
+	</div>
+	
+	
+	
+	 </div>
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	<!-- xs --> 
+	<div class="visible-xs">  
+	
+	<div id="container20">
+	
+	
+	
+	<div id="cont100">
+		
+		<img src="./images/logo.svg"/>
+		
+		
+		</div>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		
+	
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+		<div id="cont200">
+		
+			
+		
+		<div id="words20">
+			
+			<img onclick="showb2();" id="burger10" style="cursor: pointer; position: absolute; right: 5%;" src="./images/icon-hamburger.svg"/>
+			
+						<img onclick="hideb2();" id="burger20" style="cursor: pointer; display: none; position: absolute; right: 5%;" src="./images/icon-hamburger.svg"/>
+
+			</div>
+		
+		<div style="display: none;" id="insideburger2">
+		
+			<li><strong> PRODUCTS</strong></li>
+			<li><strong> FEATURES</strong> </li>
+			<li><strong> PRICING </strong></li>
+			<hr>
+			<li style="color:grey"><strong> LOGIN</strong></li>
+		
+		
+		</div>
+		
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+			
+		
+		</div>
+	
+	<img id="img200" style="margin-top: 130px; margin-left: 50px; " src="./images/mobile%20and%20desktop.svg"/>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<div style="position: absolute; left:5%; width: 85%"> 
+		
+		<div id="new20"><strong>NEW</strong></div> <span style="margin-left: 20px; color:#c6bcbc; letter-spacing: 2.5px">MONOGRAPH &nbsp; DASHBOARD</span>	
+		
+			<h1 style="font-size: 28px; font-family:[Barlow Condensed] "><strong><B>POWERFUL INSIGHTS  INTO YOUR TEAM</B></strong></h1>
+		
+		<br>
+		<h3 style="font-size: 18px; word-break: break-word" >Project planning and time tracking  for agile teams</h3>
+		
+		<br>
+		<div style="display: inline">
+		<button id="butt100"><strong> SCHUDLE A DEMO </strong> </button>
+		
+		<button id="butt200"><strong> TO SEE A PREVIEW </strong> </button>
+		</div>
+	
+	
+	
+	</div>
+	
+	
+	
+	 </div>
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+
+	function showb(){
+
+	window.insideburger.style.display="block";
+		window.insideburger2.style.display="block";
+		window.burger1.style.display="none";
+		window.burger10.style.display="none";
+		window.burger2.style.display="block";
+		window.burger20.style.display="block";
+	}
+	
+	function hideb() {
+		
+		window.insideburger.style.display="none";
+		window.insideburger2.style.display="none";
+		window.burger1.style.display="block";
+		window.burger10.style.display="block";
+		window.burger2.style.display="none";
+		window.burger20.style.display="none";
+		
+	}
+			
+			function showb2(){
+
+	window.insideburger2.style.display="block";
+				window.insideburger.style.display="block";
+		window.burger10.style.display="none";
+				window.burger1.style.display="none";
+		window.burger2.style.display="block";
+				window.burger20.style.display="block";
+	}
+	
+	function hideb2() {
+		
+		window.insideburger.style.display="none";
+		window.insideburger2.style.display="none";
+		window.burger1.style.display="block";
+		window.burger10.style.display="block";
+		window.burger2.style.display="none";
+		window.burger20.style.display="none";
+		
+	}
+	
+	
+	
+	</script>
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
